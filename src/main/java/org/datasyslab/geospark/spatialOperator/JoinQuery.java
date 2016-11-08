@@ -17,6 +17,7 @@ import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.api.java.function.Function;
 import org.apache.spark.api.java.function.Function2;
 
+import org.apache.spark.api.java.function.PairFlatMapFunction;
 import org.datasyslab.geospark.joinJudgement.PointByPolygonJudgement;
 import org.datasyslab.geospark.joinJudgement.PointByPolygonJudgementUsingIndex;
 import org.datasyslab.geospark.joinJudgement.PointByRectangleJudgement;
@@ -279,9 +280,8 @@ public class JoinQuery implements Serializable{
 
        return joinListResultAfterAggregation;
    }
-   
 
-   
+
     /**
      * Spatial Join Query using index nested loop. The objectRDD should be indexed in advance.
      * @param objectRDD

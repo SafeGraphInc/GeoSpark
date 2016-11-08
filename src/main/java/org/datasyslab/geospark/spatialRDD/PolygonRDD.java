@@ -250,8 +250,8 @@ public class PolygonRDD implements Serializable {
         this.rawPolygonRDD.unpersist();
         this.gridPolygonRDD = unPartitionedGridPolygonRDD.partitionBy(new SpatialPartitioner(grids.size()));//.persist(StorageLevel.DISK_ONLY());
 
-    
-        
+
+
     }
     
     /**
